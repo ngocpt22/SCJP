@@ -23,13 +23,15 @@ public class AddingInSet {
 		 * to be added to your "no duplicates allowed" set. */
 		
 		/*Students doesn't override hashcode(), so that HashSet will display for all 4 Students object. 
-		 * If you override hashCode() only, the result still has 4 object with 2 object are the same 
+		 * If you override hashCode() only, the result still has 4 object with 2 object addresses are the same 
 		 * (ex: 2 objects com.ngoc.collections.hashset.objects.Students@659e0bfd and 
 		 * 2 other objects com.ngoc.collections.hashset.objects.Students@2a139a55)*/		
 		
 		Set<Students> studentsObj = new HashSet<Students>();
+		studentsObj.add(null);
 		studentsObj.add(new Students("N", 25));
 		studentsObj.add(new Students("Q", 21));
+		studentsObj.add(null);
 		studentsObj.add(new Students("Q", 21));
 		studentsObj.add(new Students("N", 25));
 		System.out.println(studentsObj);
