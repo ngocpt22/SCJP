@@ -1,7 +1,11 @@
 package com.ngoc.generics.tutorialspoint;
 
 public class GenericMethodTest {
-	//generic method printArray
+	
+	/**
+	 * a type parameter section delimited by angle brackets (< and >) that precedes the method's return type (eg: <E> below)
+	 * generic method printArray
+	 */
 	public static <E> void printArray(E[] inputArray) {
 		for (E e : inputArray) {
 			System.out.printf("%s ", e);
