@@ -14,13 +14,19 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=geometry"></script>
 	<script>
 		function initialize() {
+			var markerDestination;
+			var endBB = new google.maps.LatLng(16.040949, 108.221485);
 			var map = new google.maps.Map(document.getElementById("map"), {
 			  center: {lat: 16.0479087, lng: 108.205027},
 			  zoom: 14,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			});
-			
+			markerDestination=new google.maps.Marker({map:map, icon:"axon.png"});
+			markerDestination.setPosition(endBB);
+			markerDestination.setZIndex(9999);
 			getDirections(map);
+			markerDestination=new google.maps.Marker({map:map, icon:"bamboo.png"});
+			setTimeout(function(){markerDestination.setPosition(endBB);markerDestination.setZIndex(99999); }, 13700);
 		}
 
 		function moveMarker(map, marker, latlng) {
@@ -160,9 +166,6 @@
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
-	<script>
-		alert("OK");
 	</script>
 </head>
 <body>
