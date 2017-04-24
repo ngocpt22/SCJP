@@ -39,4 +39,6 @@ public class EqualTesting {
 	public boolean equals(String obj) {
 		return true;
 	}*/
+	
+	/*FILE CHANGED FROM NEW README-EDITS BRANCH*/
 }
